@@ -5,10 +5,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--secondary-color);
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
     padding: 1rem 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
 }
 
 .nav-container {
@@ -21,26 +23,28 @@
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.25rem;
+    font-weight: 800;
     color: var(--white);
     text-decoration: none;
-    letter-spacing: 2px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: center;
 }
 
 .nav-menu a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
     transition: var(--transition);
     position: relative;
 }
@@ -53,7 +57,7 @@
 .nav-menu a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -8px;
     left: 0;
     width: 0;
     height: 2px;
@@ -71,8 +75,13 @@
     background: none;
     border: none;
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.mobile-menu-toggle:hover {
+    color: var(--primary-color);
 }
 
 /* Responsive Header */
