@@ -1,0 +1,70 @@
+/* Page Styles - For internal pages */
+
+.page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: var(--white);
+    padding: 8rem 2rem 4rem;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.content-block {
+    margin-bottom: 3rem;
+}
+
+.content-block h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.content-block p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.content-block ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-block li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.content-block a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.content-block a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Page Styles */
+@media (max-width: 968px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+}
