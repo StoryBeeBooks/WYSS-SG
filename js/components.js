@@ -55,19 +55,22 @@ function initializeNavigation() {
         }
     });
 
-    // Add scroll effect to header
-    let lastScroll = 0;
+    // Add scroll effect to header: toggle `.scrolled` class when user scrolls
     const header = document.querySelector('.header');
-    
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
-        } else {
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        }
-        
-        lastScroll = currentScroll;
-    });
+    const SCROLL_THRESHOLD = 50;
+    if (header) {
+        // Run once on load in case the page is already scrolled
+        const checkScroll = function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > SCROLL_THRESHOLD) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        };
+
+        checkScroll();
+
+        window.addEventListener('scroll', checkScroll, { passive: true });
+    }
 }
