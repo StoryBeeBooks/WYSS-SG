@@ -54,8 +54,10 @@ function openVideoModal(videoUrl) {
     
     modal.innerHTML = `
         <div class="video-modal-content" style="position: relative; width: 90%; max-width: 1000px;">
-            <span class="video-modal-close" style="position: absolute; top: -40px; right: 0; color: white; font-size: 2rem; cursor: pointer;">&times;</span>
-            <iframe src="${videoUrl}" frameborder="0" allowfullscreen style="width: 100%; height: 500px;"></iframe>
+            <button class="video-modal-close" aria-label="Close" style="position: absolute; top: 10px; right: 10px; color: white; font-size: 1.75rem; background: transparent; border: none; cursor: pointer;">&times;</button>
+            <div class="responsive-embed" style="width: 100%;">
+                <iframe src="${videoUrl}" frameborder="0" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+            </div>
         </div>
     `;
     
