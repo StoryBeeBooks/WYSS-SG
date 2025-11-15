@@ -18,6 +18,8 @@
     position: relative;
     padding-right: 2rem;
     transition: var(--transition);
+    font-family: var(--font-title);
+    font-weight: 600;
 }
 
 .faq-question:hover {

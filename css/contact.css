@@ -12,6 +12,7 @@
     font-size: 0.95rem;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    font-family: var(--font-subtitle);
 }
 
 .form-group input,
@@ -22,7 +23,7 @@
     border: 2px solid #E0E4E8;
     border-radius: 8px;
     font-size: 1rem;
-    font-family: inherit;
+    font-family: var(--font-body);
     transition: var(--transition);
     background: var(--white);
     color: var(--text-color);
@@ -54,6 +55,7 @@
     cursor: pointer;
     transition: var(--transition);
     box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    font-family: var(--font-subtitle);
 }
 
 .btn-submit:hover {
