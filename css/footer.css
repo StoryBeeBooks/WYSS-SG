@@ -44,6 +44,19 @@
     font-family: var(--font-body);
 }
 
+/* Small inline email next to copyright */
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    margin-left: 0.6rem;
+    font-family: var(--font-subtitle);
+    font-weight: 500;
+}
+
+.footer-bottom a:hover {
+    color: var(--primary-color);
+}
+
 /* Responsive Footer */
 @media (max-width: 968px) {
     .footer-links {
