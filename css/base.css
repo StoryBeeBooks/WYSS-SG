@@ -1,7 +1,7 @@
 /* Base Styles - Common across all pages */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* Fallback for Chanticleer Roman - using Palatino/Georgia */
 @font-face {
@@ -19,9 +19,10 @@
     --bg-light: #F5F6FA;
     --white: #ffffff;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --header-height: 70px;
     
     /* Font Families */
-    --font-title: 'Playfair Display', 'Didot', 'Times New Roman', serif;
+    --font-title: 'Old Standard TT', 'Playfair Display', 'Didot', 'Times New Roman', serif;
     --font-subtitle: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-body: 'Chanticleer Roman', 'Palatino Linotype', 'Palatino', Georgia, serif;
 }
@@ -41,6 +42,26 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
     letter-spacing: 0.01em;
+}
+
+/* Typography defaults: central single source for title styles
+   These selectors intentionally target common heading locations like
+   hero headings and page headers so we don't need hard-coded font-family
+   in multiple files. Avoid editing vendor files; override here instead. */
+h1,
+.hero h1,
+.page-header h1,
+.section-title,
+.site-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+}
+
+/* Ensure headings fall back consistently for subtitle usage */
+h2,
+.subtitle,
+.section-subtitle {
+    font-family: var(--font-subtitle);
 }
 
 /* Utility Classes */
@@ -65,5 +86,15 @@ body {
 @media (max-width: 480px) {
     body {
         font-size: 14px;
+    }
+}
+
+/* On small screens, ensure hero/page header content is pushed below the fixed header
+   so titles remain visible and tappable. This only adds padding to content, not to
+   the video itself (video still reaches to the top edge). */
+@media (max-width: 768px) {
+    .hero-content,
+    .page-header-content {
+        padding-top: calc(var(--header-height) + 0.5rem);
     }
 }
