@@ -214,9 +214,17 @@
         line-height: 1.6;
     }
 
+    .page-header-content {
+        padding: 0 1.25rem;
+    }
+
     .page-header-accent {
         height: 100px;
         margin-right: 1rem;
+    }
+
+    .page-content {
+        padding: 3rem 1.25rem;
     }
 }
 
