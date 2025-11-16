@@ -134,10 +134,6 @@
 
 /* Mobile landscape */
 @media (max-width: 896px) and (orientation: landscape) {
-    .nav-container {
-        padding: 0 1.25rem;
-    }
-
     .logo {
         font-size: 1.5rem;
     }

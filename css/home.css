@@ -270,10 +270,6 @@
         line-height: 1.6;
     }
 
-    .hero-content {
-        padding: 0 1.25rem;
-    }
-
     .hero-accent {
         height: 100px;
         margin-right: 1rem;
@@ -282,11 +278,6 @@
     .btn-primary {
         padding: 0.85rem 2rem;
         font-size: 0.9rem;
-    }
-
-    .section {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
     }
 }
 
