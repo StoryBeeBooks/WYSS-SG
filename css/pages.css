@@ -211,16 +211,17 @@
     }
 
     .page-header-content {
-        padding: 0 2rem;
+        padding: 0 1rem;
+        width: 100%;
     }
 
     .page-header-accent {
         height: 100px;
-        margin-right: 1.25rem;
+        margin-right: 1rem;
     }
 
     .page-content {
-        padding: 3rem 2rem;
+        padding: 3rem 1rem;
     }
 }
 

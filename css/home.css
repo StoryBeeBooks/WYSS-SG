@@ -266,17 +266,22 @@
     }
 
     .hero-content {
-        padding: 0 2rem;
+        padding: 0 1rem;
+        width: 100%;
     }
 
     .hero-accent {
         height: 100px;
-        margin-right: 1.25rem;
+        margin-right: 1rem;
     }
 
     .btn-primary {
         padding: 0.85rem 2rem;
         font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
     }
 }
 
