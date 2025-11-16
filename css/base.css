@@ -1,36 +1,47 @@
-/* Base Styles - Common across all pages */
+/* ===========================
+   BASE STYLES - WYSS Website
+   =========================== */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Fallback for Chanticleer Roman - using Palatino/Georgia */
-@font-face {
-    font-family: 'Chanticleer Roman';
-    src: local('Palatino Linotype'), local('Palatino'), local('Georgia');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* CSS Variables */
 :root {
+    /* Colors */
     --primary-color: #E74C3C;
     --secondary-color: #0A0A0A;
     --text-color: #2C3E50;
     --light-text: #5A6C7D;
     --bg-light: #F5F6FA;
     --white: #ffffff;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --header-height: 70px;
+    --black: #000000;
     
-    /* Font Families */
-    --font-title: 'Old Standard TT', 'Playfair Display', 'Didot', 'Times New Roman', serif;
+    /* Spacing */
+    --header-height: 80px;
+    --section-padding: 5rem 0;
+    --container-padding: 0 2rem;
+    
+    /* Transitions */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease;
+    
+    /* Fonts */
+    --font-title: 'Old Standard TT', 'Playfair Display', Georgia, serif;
     --font-subtitle: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-body: 'Chanticleer Roman', 'Palatino Linotype', 'Palatino', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -40,39 +51,96 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    letter-spacing: 0.01em;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    min-width: 0;
+    min-height: 100vh;
 }
 
-html {
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* Typography defaults: central single source for title styles
-   These selectors intentionally target common heading locations like
-   hero headings and page headers so we don't need hard-coded font-family
-   in multiple files. Avoid editing vendor files; override here instead. */
-h1,
-.hero h1,
-.page-header h1,
-.section-title,
-.site-title {
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-title);
     font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
 }
 
-/* Ensure headings fall back consistently for subtitle usage */
-h2,
-.subtitle,
-.section-subtitle {
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+/* Section */
+.section {
+    padding: var(--section-padding);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
     font-family: var(--font-subtitle);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Utility Classes */
@@ -87,86 +155,58 @@ h2,
     transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
-    body {
-        font-size: 16px;
-        line-height: 1.65;
-    }
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+/* Responsive Typography */
+@media (max-width: 1024px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.25rem; }
+    h3 { font-size: 1.75rem; }
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 15px;
+    :root {
+        --header-height: 70px;
+        --section-padding: 4rem 0;
+        --container-padding: 0 1.5rem;
+    }
+    
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.875rem 2rem;
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 14px;
-        line-height: 1.6;
+    :root {
+        --header-height: 65px;
+        --section-padding: 3rem 0;
+        --container-padding: 0 1.25rem;
     }
-}
-
-/* On small screens, ensure hero/page header content is pushed below the fixed header
-   so titles remain visible and tappable. This only adds padding to content, not to
-   the video itself (video still reaches to the top edge). */
-@media (max-width: 768px) {
-    .hero-content,
-    .page-header-content {
-        padding-top: calc(var(--header-height) + 1rem);
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content,
-    .page-header-content {
-        padding-top: calc(var(--header-height) + 0.75rem);
-    }
-}
-
-/* Make media elements responsive site-wide */
-img,
-picture,
-video,
-iframe,
-embed,
-object {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Responsive embed helper for iframes/video with fixed aspect ratios */
-.responsive-embed {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 */
-}
-.responsive-embed iframe,
-.responsive-embed video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* === FIX FOR MOBILE LANDSCAPE VIEW === */
-@media (max-width: 896px) and (orientation: landscape) {
-    /*
-     * This override targets all elements with large horizontal padding that causes
-     * the layout to break in narrow landscape views. We force a smaller,
-     * consistent side padding to prevent overflow and eliminate the white bars.
-     */
-    .nav-container,
-    .hero-content,
-    .section,
-    .page-header-content,
-    .page-content,
-    .footer {
-        padding-left: 1.25rem !important;
-        padding-right: 1.25rem !important;
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.35rem; }
+    p { font-size: 0.95rem; }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.75rem 1.75rem;
+        font-size: 0.9rem;
     }
 }
