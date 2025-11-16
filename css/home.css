@@ -9,8 +9,6 @@
     overflow: hidden;
     width: 100%;
     min-width: 0;
-    margin: 0;
-    padding: 0;
 }
 
 .hero-video-bg {
@@ -47,7 +45,6 @@
     position: relative;
     max-width: 100%;
     width: 100%;
-    margin: 0;
     padding: 0 4rem;
     z-index: 2;
     color: var(--white);
@@ -130,7 +127,6 @@
 .section {
     padding: 6rem 2rem;
     width: 100%;
-    margin: 0;
     overflow-x: hidden;
 }
 
@@ -261,8 +257,6 @@
     .hero {
         height: 100vh;
         min-height: 500px;
-        margin: 0;
-        padding: 0;
     }
 
     .hero h1 {
@@ -276,13 +270,6 @@
         line-height: 1.6;
     }
 
-    .hero-content {
-        padding: 0 1.25rem;
-        width: 100%;
-        margin: 0;
-        max-width: 100%;
-    }
-
     .hero-accent {
         height: 100px;
         margin-right: 1rem;
@@ -291,12 +278,6 @@
     .btn-primary {
         padding: 0.85rem 2rem;
         font-size: 0.9rem;
-    }
-
-    .section {
-        padding: 3rem 1.25rem;
-        margin: 0;
-        width: 100%;
     }
 }
 

@@ -12,7 +12,6 @@
     text-align: center;
     width: 100%;
     min-width: 0;
-    margin: 0;
 }
 
 .page-header-video {
@@ -41,7 +40,6 @@
     z-index: 2;
     max-width: 100%;
     width: 100%;
-    margin: 0;
     padding: 0 4rem;
     color: var(--white);
     display: flex;
@@ -204,8 +202,6 @@
     .page-header {
         height: 100vh;
         min-height: 500px;
-        margin: 0;
-        padding: 0;
     }
 
     .page-header h1 {
@@ -218,22 +214,9 @@
         line-height: 1.6;
     }
 
-    .page-header-content {
-        padding: 0 1.25rem;
-        width: 100%;
-        margin: 0;
-        max-width: 100%;
-    }
-
     .page-header-accent {
         height: 100px;
         margin-right: 1rem;
-    }
-
-    .page-content {
-        padding: 3rem 1.25rem;
-        margin: 0;
-        width: 100%;
     }
 }
 
