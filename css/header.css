@@ -94,18 +94,23 @@
 
 /* Responsive Header */
 @media (max-width: 968px) {
+    .logo {
+        font-size: 1.85rem;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
         top: var(--header-height);
         flex-direction: column;
-        background: var(--secondary-color);
+        background: rgba(10, 10, 10, 0.98);
         width: 100%;
         text-align: center;
         transition: var(--transition);
         padding: 2rem 0;
         gap: 1.5rem;
         z-index: 1500;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.5);
     }
 
     .nav-menu.active {
@@ -121,5 +126,33 @@
         padding: 0.9rem 1.25rem;
         font-size: 1.05rem;
         border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.75rem 0;
+    }
+
+    .nav-container {
+        padding: 0 1.25rem;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .mobile-menu-toggle {
+        font-size: 1.6rem;
+    }
+
+    .nav-menu {
+        padding: 1.5rem 0;
+        gap: 1.25rem;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
     }
 }

@@ -59,8 +59,45 @@
 
 /* Responsive Footer */
 @media (max-width: 968px) {
+    .footer {
+        padding: 3rem 1.5rem 1.25rem;
+    }
+
     .footer-links {
         flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2.5rem 1.25rem 1rem;
+    }
+
+    .footer-links {
         gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .footer-bottom a {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
     }
 }
