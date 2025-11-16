@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    width: 100%;
 }
 
 .hero-video-bg {
@@ -124,6 +125,7 @@
 /* Content Sections */
 .section {
     padding: 6rem 2rem;
+    width: 100%;
 }
 
 .section-light {
