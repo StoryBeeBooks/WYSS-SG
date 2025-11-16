@@ -11,6 +11,8 @@
     padding: 0;
     text-align: center;
     width: 100%;
+    min-width: 0;
+    margin: 0;
 }
 
 .page-header-video {
@@ -37,8 +39,9 @@
 .page-header-content {
     position: relative;
     z-index: 2;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
     padding: 0 4rem;
     color: var(--white);
     display: flex;
@@ -82,6 +85,7 @@
     margin: 0 auto;
     padding: 5rem 2rem;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .content-block {
@@ -200,6 +204,8 @@
     .page-header {
         height: 100vh;
         min-height: 500px;
+        margin: 0;
+        padding: 0;
     }
 
     .page-header h1 {
@@ -213,8 +219,10 @@
     }
 
     .page-header-content {
-        padding: 0 1rem;
+        padding: 0 1.25rem;
         width: 100%;
+        margin: 0;
+        max-width: 100%;
     }
 
     .page-header-accent {
@@ -223,7 +231,9 @@
     }
 
     .page-content {
-        padding: 3rem 1rem;
+        padding: 3rem 1.25rem;
+        margin: 0;
+        width: 100%;
     }
 }
 
