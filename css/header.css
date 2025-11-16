@@ -26,6 +26,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -129,6 +130,38 @@
     }
 }
 
+/* Mobile landscape */
+@media (max-width: 896px) and (orientation: landscape) {
+    .header {
+        padding: 0.65rem 0;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .mobile-menu-toggle {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        padding: 1.25rem 0;
+        gap: 1rem;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .nav-menu a {
+        font-size: 0.95rem;
+        padding: 0.65rem 1rem;
+    }
+}
+
+/* Mobile portrait */
 @media (max-width: 480px) {
     .header {
         padding: 0.75rem 0;
