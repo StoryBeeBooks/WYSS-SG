@@ -55,19 +55,52 @@ function initializeNavigation() {
         }
     });
 
-    // Add scroll effect to header
-    let lastScroll = 0;
+    // Add enhanced scroll effect to header: scrolled, hide-on-scroll-down, show-on-scroll-up
     const header = document.querySelector('.header');
-    
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
-        } else {
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    if (header) {
+        let lastKnownScrollY = window.pageYOffset;
+        let lastScrollY = lastKnownScrollY;
+        let ticking = false;
+        const SCROLL_THRESHOLD = 80; // when header should switch to scrolled state
+
+        function onScrollTick() {
+            const currentScrollY = lastKnownScrollY;
+
+            // add/remove scrolled class
+            if (currentScrollY > SCROLL_THRESHOLD) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // hide on scroll down, show on scroll up
+            if (Math.abs(currentScrollY - lastScrollY) > 10) {
+                if (currentScrollY > lastScrollY && currentScrollY > SCROLL_THRESHOLD) {
+                    // scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // scrolling up
+                    header.classList.remove('hidden');
+                }
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
         }
-        
-        lastScroll = currentScroll;
-    });
+
+        window.addEventListener('scroll', function() {
+            lastKnownScrollY = window.pageYOffset;
+            if (!ticking) {
+                window.requestAnimationFrame(onScrollTick);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Also remove hidden state on focus/keyup to ensure header appears when user navigates with keyboard
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab' || e.key === 'ArrowUp') {
+                header.classList.remove('hidden');
+            }
+        });
+    }
 }

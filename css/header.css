@@ -12,6 +12,41 @@
     transition: var(--transition);
 }
 
+/* Scrolled state: when the page is scrolled down */
+.header.scrolled {
+    background: rgba(255,255,255,0.96);
+    padding: 0.5rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    backdrop-filter: blur(6px);
+}
+
+/* Hidden state: hide header when user scrolls down */
+.header.hidden {
+    transform: translateY(-120%);
+    transition: transform 0.35s cubic-bezier(0.2,0,0,1);
+}
+
+/* Shrink logo and tighten nav when scrolled */
+.header.scrolled .logo {
+    font-size: 1.5rem;
+    letter-spacing: 0.03em;
+}
+
+.header.scrolled .nav-menu {
+    gap: 1.5rem;
+}
+
+.header.scrolled .nav-menu a {
+    color: var(--text-color);
+}
+
+/* Ensure smooth transitions for elements inside header */
+.header .logo,
+.header .nav-menu a,
+.header .mobile-menu-toggle {
+    transition: var(--transition);
+}
+
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
