@@ -240,3 +240,202 @@
         width: 3px;
     }
 }
+
+/* Partnership Section */
+.partnership-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.partnership-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partnership-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.partnership-header h2 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-title);
+    letter-spacing: -0.02em;
+}
+
+.partnership-header p {
+    font-size: 1.25rem;
+    color: var(--light-text);
+    font-family: var(--font-subtitle);
+    font-weight: 400;
+}
+
+.partnership-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.partnership-story {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partnership-story:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.partnership-story h3 {
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-title);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.25rem;
+}
+
+.partnership-story p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 1.25rem;
+    font-family: var(--font-body);
+}
+
+.partnership-story p:last-child {
+    margin-bottom: 0;
+}
+
+/* Partner Logos Grid */
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+    background: var(--white);
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+}
+
+.partner-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.partner-logo-item:hover {
+    transform: scale(1.1);
+}
+
+.partner-logo-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* Partnership Section Responsive */
+@media (max-width: 968px) {
+    .partnership-section {
+        padding: 4rem 2rem;
+    }
+
+    .partnership-header h2 {
+        font-size: 2.25rem;
+    }
+
+    .partnership-header p {
+        font-size: 1.1rem;
+    }
+
+    .partnership-story {
+        padding: 2rem;
+    }
+
+    .partnership-story h3 {
+        font-size: 1.5rem;
+    }
+
+    .partnership-story p {
+        font-size: 1.05rem;
+    }
+
+    .partner-logos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2.5rem 2rem;
+    }
+
+    .partner-logo-item img {
+        max-height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partnership-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .partnership-header {
+        margin-bottom: 3rem;
+    }
+
+    .partnership-header h2 {
+        font-size: 1.85rem;
+    }
+
+    .partnership-header p {
+        font-size: 1rem;
+    }
+
+    .partnership-content {
+        gap: 2rem;
+    }
+
+    .partnership-story {
+        padding: 1.5rem;
+    }
+
+    .partnership-story h3 {
+        font-size: 1.35rem;
+        padding-left: 1rem;
+    }
+
+    .partnership-story p {
+        font-size: 1rem;
+    }
+
+    .partner-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .partner-logo-item {
+        padding: 0.75rem;
+    }
+
+    .partner-logo-item img {
+        max-height: 60px;
+    }
+}
+
