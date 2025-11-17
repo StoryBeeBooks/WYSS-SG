@@ -43,6 +43,10 @@
     width: 100%;
 }
 
+.page-header-content > div {
+    max-width: 650px;
+}
+
 .page-header-accent {
     width: 6px;
     height: 180px;
