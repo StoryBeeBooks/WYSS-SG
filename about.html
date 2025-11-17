@@ -117,5 +117,16 @@
 
     <script src="js/components.js"></script>
     <script src="js/utils.js"></script>
+    <script type="module">
+        import initAboutTimeline from './js/about-3d.js';
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the 3D timeline in the About page
+            try {
+                initAboutTimeline('timeline-3d', 'timeline-info');
+            } catch (e) {
+                console.error('Failed to initialize About timeline:', e);
+            }
+        });
+    </script>
 </body>
 </html>
