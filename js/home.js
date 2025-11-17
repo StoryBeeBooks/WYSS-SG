@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const animateValue = (element, start, end, duration) => {
         const startTime = performance.now();
-        const isYear = end === 1999;
+        const hasPlus = element.querySelector('.stat-plus');
 
         const update = (currentTime) => {
             const elapsed = currentTime - startTime;
@@ -15,12 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const easeOutQuart = 1 - Math.pow(1 - progress, 4);
             const current = Math.floor(start + (end - start) * easeOutQuart);
             
-            element.textContent = current;
+            if (hasPlus) {
+                element.childNodes[0].textContent = current;
+            } else {
+                element.textContent = current;
+            }
             
             if (progress < 1) {
                 requestAnimationFrame(update);
             } else {
-                element.textContent = end;
+                if (hasPlus) {
+                    element.childNodes[0].textContent = end;
+                } else {
+                    element.textContent = end;
+                }
             }
         };
 
