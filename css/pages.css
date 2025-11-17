@@ -150,29 +150,87 @@
 
 @media (max-width: 480px) {
     .page-header {
-        height: 35vh;
+        height: 50vh;
+        min-height: 400px;
     }
 
     .page-header-content {
         flex-direction: column;
         gap: 1rem;
+        padding: 0 1.5rem;
     }
 
     .page-header h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        line-height: 1.2;
     }
 
     .page-header p {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .page-header-accent {
-        height: 80px;
-        width: 5px;
+        height: 60px;
+        width: 4px;
         margin-right: 0;
     }
     
     .content-block h2 {
         font-size: 1.85rem;
+    }
+
+    .page-content {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Mobile Landscape - Page Headers */
+@media (max-width: 968px) and (max-height: 500px) and (orientation: landscape) {
+    .page-header {
+        height: auto;
+        min-height: 100vh;
+        padding: 6rem 0 2rem;
+    }
+
+    .page-header-content {
+        padding: 0 2rem;
+        align-items: center;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .page-header p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+    }
+
+    .page-header-accent {
+        height: 80px;
+        margin-right: 1.5rem;
+    }
+
+    .page-header-video {
+        object-position: center;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 0.9rem;
+    }
+
+    .page-header-accent {
+        height: 50px;
+        width: 3px;
     }
 }
