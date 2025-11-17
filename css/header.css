@@ -138,8 +138,8 @@
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: transparent;
-        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;
         transition: var(--transition);
