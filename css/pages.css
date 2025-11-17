@@ -3,7 +3,7 @@
 .page-header {
     position: relative;
     color: var(--white);
-    height: 100vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +114,7 @@
 /* Responsive Page Styles */
 @media (max-width: 968px) {
     .page-header {
-        height: 60vh;
+        height: 42vh;
         padding: 8rem 2rem 4rem;
     }
     
@@ -129,7 +129,7 @@
 
 @media (max-width: 480px) {
     .page-header {
-        height: 50vh;
+        height: 35vh;
     }
     
     .page-header h1 {
