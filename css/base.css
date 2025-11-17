@@ -67,3 +67,8 @@ body {
         font-size: 14px;
     }
 }
+
+/* Force title typography site-wide to use the configured title font variable */
+h1, h2, .section-title, .page-header h1, .hero h1 { 
+    font-family: var(--font-title) !important;
+}
