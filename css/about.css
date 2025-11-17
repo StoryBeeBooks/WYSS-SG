@@ -1,0 +1,64 @@
+/* About page specific styles - timeline and project highlights */
+
+.about-timeline-section {
+    padding: 3rem 1.5rem;
+    background: var(--bg-light);
+}
+
+.about-timeline-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.timeline-header h2 {
+    font-size: 1.6rem;
+}
+
+.timeline-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.timeline-canvas {
+    width: 100%;
+    height: 420px;
+    background: linear-gradient(180deg, #eef2f6, #ffffff);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.timeline-info {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 6px 18px rgba(12,18,30,0.06);
+    font-size: 0.95rem;
+}
+
+.timeline-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.timeline-info p { margin-bottom: 0.6rem; color: var(--light-text); }
+
+.timeline-list-fallback { display: none; }
+
+@media (max-width: 980px) {
+    .timeline-wrapper { grid-template-columns: 1fr; }
+    .timeline-canvas { height: 360px; }
+    .timeline-info { order: 2; }
+}
+
+/* accessible fallback list visible when JS disabled */
+noscript .timeline-list-fallback { display: block; }

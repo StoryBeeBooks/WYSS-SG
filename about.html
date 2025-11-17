@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <!-- Header -->
@@ -77,6 +78,38 @@
             <h2>Location &amp; Contact</h2>
             <p>Headquartered in Shanghai, we serve clients throughout the region. For project enquiries and technical discussions, please use the contact details on our Contact page.</p>
         </div>
+
+        <!-- Timeline / Highlighted Projects -->
+        <section class="about-timeline-section">
+            <div class="about-timeline-inner">
+                <div class="timeline-header">
+                    <h2>Highlighted Projects & Timeline</h2>
+                    <p>Interactive highlights of representative projects delivered by Shanghai Liangling (WYSS brand).</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-canvas" id="timeline-3d" aria-label="Interactive project timeline" role="region"></div>
+
+                    <aside class="timeline-info" id="timeline-info">
+                        <h3 class="proj-title">Project Title</h3>
+                        <div class="proj-sub">Short subtitle</div>
+                        <p class="proj-details">Select a card to see project details. Projects include Nanjing Greenland Zifeng Tower, Waigaoqiao Agricultural Bank Data Center, and Shanghai Center cooling projects (sourced from public site).</p>
+                        <p class="small">Source: public project listings from the company website.</p>
+                    </aside>
+                </div>
+
+                <noscript>
+                    <div class="timeline-list-fallback">
+                        <h4>Project Highlights</h4>
+                        <ul>
+                            <li>Nanjing Greenland Zifeng Tower — Supertall HVAC integration</li>
+                            <li>Waigaoqiao Agricultural Bank Data Center — Mission-critical cooling</li>
+                            <li>Shanghai Center Cooling Project — Central plant & thermal storage</li>
+                        </ul>
+                    </div>
+                </noscript>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
