@@ -187,6 +187,10 @@
 
 /* Responsive Home Page */
 @media (max-width: 968px) {
+    .hero {
+        padding-top: 80px;
+    }
+
     .hero h1 {
         font-size: 2.75rem;
     }
@@ -219,6 +223,10 @@
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding-top: 70px;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
@@ -254,7 +262,7 @@
     .hero {
         height: auto;
         min-height: 100vh;
-        padding: 6rem 0 3rem;
+        padding: 7rem 0 3rem;
     }
 
     .hero-content {
