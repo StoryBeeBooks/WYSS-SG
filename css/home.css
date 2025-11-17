@@ -377,6 +377,80 @@
     transform: translateX(5px);
 }
 
+/* Benefits Section */
+.benefits-section {
+    background: #f5f5f5;
+    padding: 6rem 2rem;
+}
+
+.benefits-section .container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.benefits-header {
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+.benefits-header h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: var(--font-title);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.benefits-header p {
+    font-size: 1.15rem;
+    color: var(--light-text);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-family: var(--font-body);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.benefit-item {
+    text-align: left;
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.75rem;
+    color: var(--secondary-color);
+}
+
+.benefit-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-title);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.benefit-item p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--light-text);
+    font-family: var(--font-body);
+}
+
 /* Responsive Home Page */
 @media (max-width: 968px) {
     .hero {
@@ -462,6 +536,41 @@
     }
 
     .innovation-content p {
+        font-size: 1rem;
+    }
+
+    .benefits-section {
+        padding: 4rem 2rem;
+    }
+
+    .benefits-header {
+        margin-bottom: 3.5rem;
+    }
+
+    .benefits-header h2 {
+        font-size: 2rem;
+    }
+
+    .benefits-header p {
+        font-size: 1.05rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-item h3 {
+        font-size: 1.35rem;
+    }
+
+    .benefit-item p {
         font-size: 1rem;
     }
 }
@@ -570,6 +679,42 @@
     .btn-innovation {
         padding: 0.85rem 1.85rem;
         font-size: 0.9rem;
+    }
+
+    .benefits-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .benefits-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .benefits-header h2 {
+        font-size: 1.65rem;
+    }
+
+    .benefits-header p {
+        font-size: 0.95rem;
+    }
+
+    .benefits-grid {
+        gap: 2.5rem;
+    }
+
+    .benefit-icon {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 1.25rem;
+    }
+
+    .benefit-item h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-item p {
+        font-size: 0.95rem;
+        line-height: 1.65;
     }
 }
 
