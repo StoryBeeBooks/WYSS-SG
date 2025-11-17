@@ -122,6 +122,17 @@
 
 /* Responsive Header */
 @media (max-width: 968px) {
+    .header {
+        background: transparent;
+        backdrop-filter: none;
+    }
+
+    .header.scrolled {
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
