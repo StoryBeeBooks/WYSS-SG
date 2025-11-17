@@ -127,7 +127,8 @@
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: var(--secondary-color);
+        background: transparent;
+        backdrop-filter: blur(20px);
         width: 100%;
         text-align: center;
         transition: var(--transition);
