@@ -69,3 +69,34 @@
         font-size: 1.1rem;
     }
 }
+
+/* Layout: sidebar + main */
+.faq-layout{display:flex;gap:2rem;align-items:flex-start;padding:2rem 1rem}
+.faq-sidebar{width:260px}
+.faq-main{flex:1}
+.faq-category.hidden{display:none}
+.faq-sidebar ul{list-style:none;padding:0;margin:0}
+.faq-sidebar li{margin-bottom:.5rem}
+.faq-sidebar .category-link{background:none;border:0;padding:.6rem .25rem;text-align:left;width:100%;cursor:pointer;font-family:var(--font-base);font-size:1rem;border-radius:4px}
+.faq-sidebar .category-link:focus{outline:2px solid var(--primary-color);outline-offset:2px}
+.faq-sidebar .category-link:hover{background:rgba(0,0,0,0.03)}
+.faq-sidebar .category-link.active{font-weight:700;color:var(--primary-color)}
+
+/* Improve spacing and typography */
+.faq-main h2{font-size:1.6rem;margin-bottom:1rem}
+.faq-question{font-size:1.18rem;margin-bottom:.5rem;cursor:pointer}
+.faq-answer p{margin:0.5rem 0 0}
+
+/* Make faq-question focusable styling */
+.faq-question:focus{outline:2px solid rgba(0,0,0,0.08);outline-offset:3px}
+
+/* Mobile: collapse sidebar into top nav */
+@media (max-width: 900px){
+    .faq-layout{flex-direction:column}
+    .faq-sidebar{width:100%;order:1}
+    .faq-main{order:2}
+}
+
+@media (max-width:480px){
+    .faq-sidebar .category-link{font-size:.95rem;padding:.5rem}
+}
