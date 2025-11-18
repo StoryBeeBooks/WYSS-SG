@@ -1,0 +1,572 @@
+/* Products Page Styles */
+
+/* Products Introduction */
+.products-intro {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 5rem 2rem;
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-title);
+    letter-spacing: 0.02em;
+}
+
+.intro-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    font-family: var(--font-body);
+}
+
+/* Product Category */
+.product-category {
+    padding: 6rem 2rem;
+}
+
+.bac-category {
+    background: var(--white);
+}
+
+.core-category {
+    background: #f8f9fa;
+}
+
+/* Category Brand Header */
+.category-brand {
+    margin-bottom: 5rem;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.brand-header h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.brand-badge {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: var(--font-subtitle);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.brand-intro {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--light-text);
+    font-family: var(--font-body);
+    max-width: 1000px;
+}
+
+/* Product Item (BAC Products) */
+.product-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.product-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.product-item:last-child {
+    margin-bottom: 0;
+}
+
+.product-image {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-image:hover img {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.product-number {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 70px;
+    height: 70px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--font-title);
+    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.4);
+}
+
+.product-content {
+    flex: 1;
+}
+
+.product-content h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-family: var(--font-title);
+    line-height: 1.3;
+}
+
+.product-section {
+    margin-bottom: 2rem;
+}
+
+.product-section:last-child {
+    margin-bottom: 0;
+}
+
+.product-section h4 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.product-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    font-family: var(--font-body);
+}
+
+/* Product Card (Core Components) */
+.product-card {
+    display: flex;
+    align-items: stretch;
+    gap: 3rem;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.product-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.product-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.product-card:last-child {
+    margin-bottom: 0;
+}
+
+.card-image {
+    flex: 0 0 40%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-logo h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+}
+
+.brand-subtitle {
+    display: block;
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-family: var(--font-subtitle);
+}
+
+.card-section {
+    margin-bottom: 1.75rem;
+}
+
+.card-section h4 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-section p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--light-text);
+    font-family: var(--font-body);
+}
+
+.tech-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
+.spec-badge {
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-subtitle);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+/* Call to Action */
+.products-cta {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a1a 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: var(--font-title);
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    font-family: var(--font-body);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.25rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    font-family: var(--font-subtitle);
+    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.4);
+}
+
+.cta-button:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(231, 76, 60, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .products-intro {
+        padding: 4rem 2rem;
+    }
+
+    .intro-content h2 {
+        font-size: 2rem;
+    }
+
+    .intro-content p {
+        font-size: 1.05rem;
+    }
+
+    .product-category {
+        padding: 4rem 2rem;
+    }
+
+    .category-brand {
+        margin-bottom: 3.5rem;
+    }
+
+    .brand-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-header h2 {
+        font-size: 2rem;
+    }
+
+    .brand-intro {
+        font-size: 1.05rem;
+    }
+
+    .product-item {
+        flex-direction: column !important;
+        gap: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .product-image {
+        flex: 0 0 100%;
+    }
+
+    .product-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        top: -10px;
+        right: -10px;
+    }
+
+    .product-content h3 {
+        font-size: 1.75rem;
+    }
+
+    .product-section h4 {
+        font-size: 1.15rem;
+    }
+
+    .product-section p {
+        font-size: 1rem;
+    }
+
+    .product-card {
+        flex-direction: column !important;
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .card-image {
+        flex: 0 0 100%;
+        height: 300px;
+    }
+
+    .brand-logo h3 {
+        font-size: 1.75rem;
+    }
+
+    .brand-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .card-section h4 {
+        font-size: 1.05rem;
+    }
+
+    .card-section p {
+        font-size: 0.95rem;
+    }
+
+    .products-cta {
+        padding: 4rem 2rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 1.1rem 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-intro {
+        padding: 3rem 1.5rem;
+    }
+
+    .intro-content h2 {
+        font-size: 1.65rem;
+    }
+
+    .intro-content p {
+        font-size: 0.95rem;
+    }
+
+    .product-category {
+        padding: 3rem 1.5rem;
+    }
+
+    .category-brand {
+        margin-bottom: 2.5rem;
+    }
+
+    .brand-header h2 {
+        font-size: 1.65rem;
+    }
+
+    .brand-badge {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.25rem;
+    }
+
+    .brand-intro {
+        font-size: 0.95rem;
+    }
+
+    .product-item {
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .product-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .product-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .product-section h4 {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-section p {
+        font-size: 0.95rem;
+    }
+
+    .product-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 2.5rem;
+    }
+
+    .card-image {
+        height: 240px;
+    }
+
+    .brand-logo h3 {
+        font-size: 1.5rem;
+    }
+
+    .brand-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-section h4 {
+        font-size: 1rem;
+    }
+
+    .card-section p {
+        font-size: 0.9rem;
+    }
+
+    .tech-specs {
+        gap: 0.5rem;
+        padding-top: 1rem;
+    }
+
+    .spec-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.85rem;
+    }
+
+    .products-cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.65rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+    }
+}
