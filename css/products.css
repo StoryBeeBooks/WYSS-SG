@@ -66,16 +66,23 @@
 }
 
 .brand-badge {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #c0392b 100%);
     color: var(--white);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-size: 0.95rem;
+    padding: 0.625rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
     font-weight: 600;
     font-family: var(--font-subtitle);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.25);
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.brand-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(231, 76, 60, 0.35);
 }
 
 .brand-intro {
@@ -134,7 +141,7 @@
     right: -15px;
     width: 70px;
     height: 70px;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #c0392b 100%);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -143,7 +150,13 @@
     font-size: 1.75rem;
     font-weight: 700;
     font-family: var(--font-title);
-    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 4px 16px rgba(231, 76, 60, 0.35);
+    transition: all 0.3s ease;
+}
+
+.product-item:hover .product-number {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(231, 76, 60, 0.45);
 }
 
 .product-content {
@@ -282,16 +295,24 @@
 }
 
 .spec-badge {
-    background: rgba(231, 76, 60, 0.1);
-    color: var(--primary-color);
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.85rem;
+    background: var(--white);
+    color: var(--secondary-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
     font-weight: 600;
     font-family: var(--font-subtitle);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border: 1px solid rgba(231, 76, 60, 0.2);
+    letter-spacing: 0.5px;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.2s ease;
+}
+
+.spec-badge:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Call to Action */
