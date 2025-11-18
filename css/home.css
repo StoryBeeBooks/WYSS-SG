@@ -563,6 +563,11 @@
     display: none;
 }
 
+.portfolio-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
 /* Responsive Home Page */
 @media (max-width: 968px) {
     .hero {
