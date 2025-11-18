@@ -270,73 +270,73 @@
 /* Innovation Section */
 .innovation-section {
     background: var(--white);
+    padding: 5rem 0;
 }
 
-.innovation-grid {
+.innovation-cards {
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 4rem;
+    padding: 0 2rem;
 }
 
-.innovation-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 600px;
-    position: relative;
+.innovation-card {
+    display: flex;
+    align-items: stretch;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.innovation-item-reverse {
-    direction: rtl;
+.innovation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
 }
 
-.innovation-item-reverse > * {
-    direction: ltr;
+.innovation-card-reverse {
+    flex-direction: row-reverse;
 }
 
-.innovation-image {
+.innovation-card-image {
+    flex: 0 0 45%;
     position: relative;
     overflow: hidden;
 }
 
-.innovation-image img {
+.innovation-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
-.innovation-item:hover .innovation-image img {
-    transform: scale(1.05);
+.innovation-card:hover .innovation-card-image img {
+    transform: scale(1.08);
 }
 
-.innovation-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
-    z-index: 1;
-}
-
-.innovation-content {
+.innovation-card-content {
+    flex: 1;
+    padding: 3.5rem 4rem;
+    background: #f8f9fa;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 5rem;
-    background: #f8f9fa;
 }
 
-.innovation-content h2 {
-    font-size: 2.5rem;
-    line-height: 1.2;
+.innovation-card-content h2 {
+    font-size: 2.25rem;
+    line-height: 1.25;
     margin-bottom: 1.5rem;
     color: var(--secondary-color);
     font-weight: 700;
     font-family: var(--font-title);
-    letter-spacing: -0.01em;
 }
 
-.innovation-content p {
+.innovation-card-content p {
     font-size: 1.05rem;
     line-height: 1.75;
     color: var(--light-text);
@@ -344,36 +344,35 @@
     font-family: var(--font-body);
 }
 
-.btn-innovation {
+.btn-card {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background: var(--primary-color);
+    background: #007bff;
     color: var(--white);
-    padding: 1rem 2.25rem;
+    padding: 0.85rem 2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    letter-spacing: 0.02em;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     align-self: flex-start;
     font-family: var(--font-subtitle);
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
-.btn-innovation:hover {
-    background: #c0392b;
+.btn-card:hover {
+    background: #0056b3;
     transform: translateX(5px);
-    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
 }
 
-.btn-icon {
+.btn-arrow {
     font-size: 1.25rem;
     transition: transform 0.3s ease;
 }
 
-.btn-innovation:hover .btn-icon {
+.btn-card:hover .btn-arrow {
     transform: translateX(5px);
 }
 
@@ -514,29 +513,40 @@
         font-size: 0.52rem;
     }
 
-    .innovation-item {
-        grid-template-columns: 1fr;
-        min-height: auto;
+    .innovation-section {
+        padding: 3rem 0;
     }
 
-    .innovation-item-reverse {
-        direction: ltr;
+    .innovation-cards {
+        gap: 3rem;
+        padding: 0 2rem;
     }
 
-    .innovation-image {
-        height: 350px;
+    .innovation-card {
+        flex-direction: column !important;
+        border-radius: 15px;
     }
 
-    .innovation-content {
-        padding: 3rem 2.5rem;
+    .innovation-card-image {
+        flex: 0 0 300px;
+        min-height: 300px;
     }
 
-    .innovation-content h2 {
-        font-size: 2rem;
+    .innovation-card-content {
+        padding: 2.5rem 2rem;
     }
 
-    .innovation-content p {
+    .innovation-card-content h2 {
+        font-size: 1.85rem;
+    }
+
+    .innovation-card-content p {
         font-size: 1rem;
+    }
+
+    .btn-card {
+        padding: 0.8rem 1.75rem;
+        font-size: 0.9rem;
     }
 
     .benefits-section {
@@ -646,39 +656,42 @@
         line-height: 1.3;
     }
 
-    .innovation-item {
-        grid-template-columns: 1fr;
-        min-height: auto;
+    .innovation-section {
+        padding: 2rem 0;
     }
 
-    .innovation-item-reverse {
-        direction: ltr;
+    .innovation-cards {
+        gap: 2rem;
+        padding: 0 1.5rem;
     }
 
-    .innovation-image {
-        height: 280px;
-        order: 1;
+    .innovation-card {
+        border-radius: 12px;
     }
 
-    .innovation-content {
-        padding: 2.5rem 1.5rem;
-        order: 2;
+    .innovation-card-image {
+        flex: 0 0 240px;
+        min-height: 240px;
     }
 
-    .innovation-content h2 {
-        font-size: 1.65rem;
+    .innovation-card-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .innovation-card-content h2 {
+        font-size: 1.5rem;
         margin-bottom: 1rem;
     }
 
-    .innovation-content p {
+    .innovation-card-content p {
         font-size: 0.95rem;
         line-height: 1.65;
         margin-bottom: 1.5rem;
     }
 
-    .btn-innovation {
-        padding: 0.85rem 1.85rem;
-        font-size: 0.9rem;
+    .btn-card {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
     }
 
     .benefits-section {
