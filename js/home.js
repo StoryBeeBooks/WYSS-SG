@@ -1,5 +1,43 @@
 // Animated Statistics Counter
 document.addEventListener('DOMContentLoaded', function() {
+    // WeChat Video Autoplay Fix
+    const heroVideo = document.getElementById('heroVideo');
+    if (heroVideo) {
+        // Detect WeChat browser
+        const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+        
+        if (isWeChat) {
+            // Force play on WeChat
+            const playVideo = () => {
+                heroVideo.play().catch(err => {
+                    console.log('Video autoplay prevented:', err);
+                });
+            };
+            
+            // Try to play immediately
+            playVideo();
+            
+            // Also try on WeixinJSBridgeReady event (WeChat specific)
+            if (typeof WeixinJSBridge !== 'undefined') {
+                WeixinJSBridge.invoke('getNetworkType', {}, playVideo);
+            } else {
+                document.addEventListener('WeixinJSBridgeReady', playVideo, false);
+            }
+            
+            // Fallback: play on any user interaction
+            const events = ['touchstart', 'click', 'scroll'];
+            const handleInteraction = () => {
+                playVideo();
+                events.forEach(event => {
+                    document.removeEventListener(event, handleInteraction);
+                });
+            };
+            events.forEach(event => {
+                document.addEventListener(event, handleInteraction, { once: true });
+            });
+        }
+    }
+
     const stats = document.querySelectorAll('.stat-number');
     let hasAnimated = false;
 
