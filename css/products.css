@@ -442,10 +442,7 @@
         font-size: 1.1rem;
     }
 
-    .cta-button {
-        padding: 1.1rem 2.5rem;
-        font-size: 1rem;
-    }
+    /* Button styles inherited from base.css */
 }
 
 @media (max-width: 480px) {
@@ -565,8 +562,5 @@
         margin-bottom: 2rem;
     }
 
-    .cta-button {
-        padding: 1rem 2rem;
-        font-size: 0.9rem;
-    }
+    /* Button styles inherited from base.css */
 }
