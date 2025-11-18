@@ -1,6 +1,39 @@
 // Solutions Page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+    // WeChat Video Autoplay Fix
+    const pageHeaderVideo = document.getElementById('pageHeaderVideo');
+    if (pageHeaderVideo) {
+        const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+        
+        if (isWeChat) {
+            const playVideo = () => {
+                pageHeaderVideo.play().catch(err => {
+                    console.log('Video autoplay prevented:', err);
+                });
+            };
+            
+            playVideo();
+            
+            if (typeof WeixinJSBridge !== 'undefined') {
+                WeixinJSBridge.invoke('getNetworkType', {}, playVideo);
+            } else {
+                document.addEventListener('WeixinJSBridgeReady', playVideo, false);
+            }
+            
+            const events = ['touchstart', 'click', 'scroll'];
+            const handleInteraction = () => {
+                playVideo();
+                events.forEach(event => {
+                    document.removeEventListener(event, handleInteraction);
+                });
+            };
+            events.forEach(event => {
+                document.addEventListener(event, handleInteraction, { once: true });
+            });
+        }
+    }
+
     // Scroll Animation for Solution Blocks
     const observerOptions = {
         threshold: 0.15,

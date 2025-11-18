@@ -16,7 +16,7 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <video autoplay muted loop playsinline class="page-header-video">
+        <video autoplay muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="false" x5-video-orientation="portraint" class="page-header-video" id="pageHeaderVideo">
             <source src="https://github.com/StoryBeeBooks/WYSS-SG/raw/main/Video%20Assets/Circuit2.mp4" type="video/mp4">
         </video>
         <div class="page-header-content">
@@ -102,6 +102,42 @@
 
     <script src="js/components.js"></script>
     <script src="js/utils.js"></script>
+    <script>
+    // WeChat Video Autoplay Fix
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageHeaderVideo = document.getElementById('pageHeaderVideo');
+        if (pageHeaderVideo) {
+            const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+            
+            if (isWeChat) {
+                const playVideo = () => {
+                    pageHeaderVideo.play().catch(err => {
+                        console.log('Video autoplay prevented:', err);
+                    });
+                };
+                
+                playVideo();
+                
+                if (typeof WeixinJSBridge !== 'undefined') {
+                    WeixinJSBridge.invoke('getNetworkType', {}, playVideo);
+                } else {
+                    document.addEventListener('WeixinJSBridgeReady', playVideo, false);
+                }
+                
+                const events = ['touchstart', 'click', 'scroll'];
+                const handleInteraction = () => {
+                    playVideo();
+                    events.forEach(event => {
+                        document.removeEventListener(event, handleInteraction);
+                    });
+                };
+                events.forEach(event => {
+                    document.addEventListener(event, handleInteraction, { once: true });
+                });
+            }
+        }
+    });
+    </script>
     <!-- Timeline module removed -->
 </body>
 </html>
