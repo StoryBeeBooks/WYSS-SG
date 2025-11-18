@@ -64,6 +64,18 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-family: var(--font-title);
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.header.scrolled .logo-image {
+    height: 45px;
 }
 
 .nav-menu {
