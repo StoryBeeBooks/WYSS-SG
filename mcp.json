@@ -1,0 +1,89 @@
+{
+  "mcpServers": {
+    "wyss-hvac-solutions": {
+      "type": "website",
+      "domain": "wyss-sg.com",
+      "name": "WYSS - High-Efficiency HVAC & Energy Solutions",
+      "description": "WYSS delivers premium HVAC systems, regional energy centers, ice thermal storage, and comprehensive facility management services across China and Asia-Pacific. 20+ years experience with 690+ completed projects.",
+      "version": "1.0.0",
+      "language": "en",
+      "location": {
+        "country": "Singapore",
+        "region": "Asia-Pacific",
+        "serviceAreas": ["China", "Singapore", "Asia-Pacific"]
+      },
+      "capabilities": {
+        "products": [
+          "BAC Cooling Towers",
+          "YORK Chillers",
+          "Grundfos Pumps",
+          "Danfoss Heat Exchangers",
+          "Ice Thermal Storage Systems",
+          "Evaporative Condensers",
+          "Hybrid Coolers"
+        ],
+        "services": [
+          "HVAC Engineering Solutions",
+          "Regional Energy Centers",
+          "Ice Thermal Storage Installation",
+          "Facility Management",
+          "24/7 Emergency Response",
+          "Preventative Maintenance",
+          "CCHP Systems Design"
+        ],
+        "industries": [
+          "High-Rise Buildings",
+          "Data Centers (IDC)",
+          "Industrial Manufacturing",
+          "National Infrastructure Projects"
+        ]
+      },
+      "contact": {
+        "email": "info@wysstech.com",
+        "phone": "+65 89426549",
+        "address": {
+          "street": "600 North Bridge Road, #10-01",
+          "building": "Parkview Square",
+          "city": "Singapore",
+          "postalCode": "188778",
+          "country": "Singapore"
+        }
+      },
+      "partnerships": [
+        "BAC (Baltimore Aircoil Company) - Largest Asia-Pacific Distributor",
+        "YORK (Johnson Controls)",
+        "Grundfos",
+        "Danfoss",
+        "GEA"
+      ],
+      "businessInfo": {
+        "parentCompany": "Shanghai Liangling M&E Equipment Co., Ltd.",
+        "established": 1999,
+        "employees": "120+",
+        "technicians": "40+",
+        "completedProjects": "690+",
+        "certifications": [
+          "Electronic & Intelligentialize Engineering Contractor (Class II)",
+          "Electromechanical Installation Contractor (Class II)"
+        ]
+      },
+      "seo": {
+        "primaryKeywords": [
+          "HVAC solutions",
+          "cooling towers",
+          "ice thermal storage",
+          "regional energy centers",
+          "data center cooling",
+          "facility management"
+        ],
+        "geoKeywords": [
+          "China HVAC",
+          "Singapore HVAC",
+          "Asia-Pacific cooling systems",
+          "Shanghai M&E equipment"
+        ]
+      },
+      "lastUpdated": "2025-11-25"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# WYSS Website - GitHub Pages Configuration
+# GitHub Pages uses Jekyll by default, which requires this file
+
+# Extensionless URLs Configuration for GitHub Pages
+
+# GitHub Pages will automatically handle extensionless URLs if you:
+# 1. Keep your HTML files with .html extension in the repository
+# 2. Link to pages WITHOUT the .html extension in your code
+# 3. GitHub Pages will serve them automatically
+
+# This file prevents Jekyll from processing files
+# Place in root directory
+
+# Note: GitHub Pages automatically handles:
+# - /about will serve about.html
+# - /products will serve products.html
+# - etc.
+
+# For custom domain (CNAME record already exists in repository)
