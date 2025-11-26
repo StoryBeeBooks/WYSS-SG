@@ -12,12 +12,15 @@
 }
 
 :root {
-    --primary-color: #E74C3C;
-    --secondary-color: #0A0A0A;
+    --primary-color: #2C3E50;
+    --secondary-color: #1A1A1A;
+    --accent-color: #3498DB;
     --text-color: #2C3E50;
-    --light-text: #5A6C7D;
-    --bg-light: #F5F6FA;
+    --light-text: #6B7280;
+    --bg-light: #F5F5F5;
+    --bg-card: #FAFAFA;
     --white: #ffffff;
+    --border-color: #E5E7EB;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* Font Families */

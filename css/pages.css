@@ -3,7 +3,7 @@
 .page-header {
     position: relative;
     color: var(--white);
-    height: 70vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -50,11 +50,11 @@
 .page-header-accent {
     width: 6px;
     height: 180px;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
     display: block;
     margin-right: 2.5rem;
     flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.35);
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.35);
 }
 
 .page-header h1 {

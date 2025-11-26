@@ -53,11 +53,11 @@
 .hero-accent {
     width: 6px;
     height: 180px;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
     display: block;
     margin-right: 2.5rem;
     flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.35);
 }
 
 .hero-text {

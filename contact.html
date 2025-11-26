@@ -55,7 +55,16 @@
         </div>
 
         <div class="content-block fade-in">
-            <form class="contact-form">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="4fad47af-6bff-4d2a-9434-e54ca1283322">
+                
+                <!-- Optional: Redirect after submission -->
+                <input type="hidden" name="redirect" value="https://wyss-sg.com/contact?success=true">
+                
+                <!-- Optional: Custom subject line -->
+                <input type="hidden" name="from_name" value="WYSS Contact Form">
+                
                 <div class="form-group">
                     <label for="name">Name *</label>
                     <input type="text" id="name" name="name" required>
@@ -93,6 +102,9 @@
                     <label for="message">Message *</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
+
+                <!-- Honeypot spam protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <button type="submit" class="btn-submit">Send Message</button>
             </form>
